@@ -1,0 +1,6 @@
+pillow==9.5.0
+numpy==1.26.4
+yt-dlp==2024.7.16
+opencv-python==4.8.1.78
+streamlit==1.36.0
+ultralytics==8.2.4
