@@ -35,7 +35,8 @@ def predict_and_annotate(model, image):
     bounding_boxes = results[0].boxes.xyxy.cpu().numpy()
 
     draw = ImageDraw.Draw(image)
-    font = ImageFont.truetype("arial.ttf", 40)  # Adjust font path and size
+    font_path = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
+    font = ImageFont.truetype(font_path, 30)
     colors = ["red", "blue", "green", "yellow", "purple", "orange", "cyan", "magenta"]
 
     for i, (class_name, bbox) in enumerate(zip(detected_class_names, bounding_boxes)):
